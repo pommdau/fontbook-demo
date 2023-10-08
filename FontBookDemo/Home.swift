@@ -11,6 +11,7 @@ struct Home: View {
     
     @State var fontModels: [FontModel] = [
         .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
+//        .init(url: URL(filePath: "/System/Library/Fonts/Apple Color Emoji.ttc"))!
     ]
     
     var body: some View {
@@ -21,13 +22,13 @@ struct Home: View {
                     .padding(.leading)
                 ScrollView() {
                     VStack(alignment: .leading) {
-//                        DescriptionView(fontModel: fontModel)
-//                        Divider()
-//                        LanguagesView(fontModel: fontModel)
-//                        Divider()
-//                        IdentifierView(fontModel: fontModel)
-//                        UsageView(fontModel: fontModel)
-//                        Divider()
+                        DescriptionView(fontModel: fontModel)
+                        Divider()
+                        LanguagesView(fontModel: fontModel)
+                        Divider()
+                        IdentifierView(fontModel: fontModel)
+                        UsageView(fontModel: fontModel)
+                        Divider()
                         DetailsView(fontModel: fontModel)
                         Divider()
                     }
@@ -97,7 +98,11 @@ struct LanguagesView: View {
         guard let languages = fontModel.ctFontDescriptor.languages else {
             return ""
         }
-        return languages.joined(separator: "・")
+        return languages
+            .sorted(by: { first, second in
+                first < second
+            })
+            .joined(separator: "・")
     }
     
     var body: some View {
@@ -109,15 +114,21 @@ struct LanguagesView: View {
                 .padding(.top, 10)
             
             VStack(alignment: .leading) {
-                Text("言語:")
+                Text("Designed For:")
                     .fontWeight(.semibold)
                 Text("\(languagesString)")
             }
             
             VStack(alignment: .leading) {
-                Text("スクリプト")
+                Text("Also Supported:")
                     .fontWeight(.semibold)
-                Text("(I don't know how to get it.)")
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Scripts")
+                    .fontWeight(.semibold)
+                Text("❓")
             }
         }
     }
