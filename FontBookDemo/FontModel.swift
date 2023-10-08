@@ -9,8 +9,9 @@ import AppKit
 
 class FontModel {
     let uuid = UUID()
-    let nsFont: NSFont
+    let url: URL
     let ctFont: CTFont
+    let nsFont: NSFont
     let ctFontDescriptor: CTFontDescriptor
     
     var nsFontDescriptor: NSFontDescriptor {
@@ -21,14 +22,13 @@ class FontModel {
         guard
             let data = try? Data(contentsOf: url) as NSData,
             let cgDataProvider = CGDataProvider(data: data),
-            let cgFont = CGFont(cgDataProvider),
-            let fontName = cgFont.postScriptName as String?,
-            let nsFont = NSFont(name: fontName, size: 12)
+            let cgFont = CGFont(cgDataProvider)
         else {
             return nil
         }
-        self.nsFont = nsFont
-        self.ctFont = nsFont as CTFont
+        self.url = url
+        self.ctFont = CTFontCreateWithGraphicsFont(cgFont, 0, nil, nil)
+        self.nsFont = ctFont as NSFont
         self.ctFontDescriptor = CTFontCopyFontDescriptor(ctFont)
     }
 }

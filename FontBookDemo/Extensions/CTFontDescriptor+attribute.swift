@@ -131,35 +131,15 @@ extension CTFontDescriptor {
         }
         return CTFontFormat(rawValue: rawValue)
     }
-    
-    var formatString: String? {
-        guard let format else {
+        
+    // The font descriptor's registration scope.
+    var registrationScope: CTFontManagerScope? {
+        guard let rawValue: UInt32 = loadAttribute(withKey: kCTFontRegistrationScopeAttribute) else {
             return nil
         }
-        
-        switch format {
-        case .unrecognized:
-            return "Unrecognized"
-        case .openTypePostScript:
-            return "OpenType PostScript"
-        case .openTypeTrueType:
-            return "OpenType TrueType"
-        case .trueType:
-            return "TrueType"
-        case .postScript:
-            return "PostScript"
-        case .bitmap:
-            return "Bitmap"
-        @unknown default:
-            return "Unrecognized"
-        }
+        return CTFontManagerScope(rawValue: rawValue)
     }
-    
-    // The font descriptor's registration scope.
-    var registrationScope: String? {
-        loadAttribute(withKey: kCTFontRegistrationScopeAttribute)
-    }
-    
+            
     // The font priority used by font descriptors when resolving duplicates and sorting match results.
     var priority: Int? {
         loadAttribute(withKey: kCTFontPriorityAttribute)

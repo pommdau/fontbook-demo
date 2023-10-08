@@ -30,6 +30,7 @@
 		DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFont+NameSpecifier.swift"; sourceTree = "<group>"; };
 		DAB25FC32AD2722600795A74 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFontDescriptor+properties.swift"; sourceTree = "<group>"; };
+		DAB25FC72AD28D0600795A74 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		DAB25FA12AD00A9A00795A74 = {
 			isa = PBXGroup;
 			children = (
+				DAB25FC72AD28D0600795A74 /* README.md */,
 				DAB25FAC2AD00A9A00795A74 /* FontBookDemo */,
 				DAB25FAB2AD00A9A00795A74 /* Products */,
 			);

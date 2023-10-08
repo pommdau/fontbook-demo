@@ -10,7 +10,7 @@ import SwiftUI
 struct Home: View {
     
     @State var fontModels: [FontModel] = [
-        .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular.otf"))!
+        .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
     ]
     
     var body: some View {
@@ -221,7 +221,7 @@ struct DetailsView: View {
             VStack(alignment: .leading) {
                 Text("Active")
                     .fontWeight(.semibold)
-                Text("❓")
+                Text(fontModel.ctFontDescriptor.registrationScopeString ?? "")
             }
             
             VStack(alignment: .leading) {
@@ -239,7 +239,7 @@ struct DetailsView: View {
             VStack(alignment: .leading) {
                 Text("Location")
                     .fontWeight(.semibold)
-                Text(fontModel.ctFontDescriptor.url?.path ?? "")
+                Text(fontModel.url.path)
             }
             
             VStack(alignment: .leading) {
