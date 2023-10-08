@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Home: View {
     
-    @State var fontModels: [FontModel] = [
-        .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
-//        .init(url: URL(filePath: "/System/Library/Fonts/Apple Color Emoji.ttc"))!
-    ]
+//    @State var fontModels: [FontModel] = [
+//        .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
+////        .init(url: URL(filePath: "/System/Library/Fonts/Apple Color Emoji.ttc"))!
+//    ]
     
-//    @State var fontModels: [FontModel] = FontModel.sampleData
+    @State var fontModels: [FontModel] = FontModel.sampleData
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -42,10 +42,13 @@ struct Home: View {
                         DetailsView(fontModel: fontModel)
                         Divider()
                     }
+                    .onAppear() {
+                        
+                    }
                     .padding()
                 }
             } else {
-                Text("URL is invalid!")
+                Text("URL is invalid!")                                                
             }
         }
         .textSelection(.enabled)

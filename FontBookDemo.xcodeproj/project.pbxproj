@@ -22,6 +22,7 @@
 		DAB25FD22AD2DA4400795A74 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD12AD2DA4400795A74 /* IdentifierView.swift */; };
 		DAB25FD42AD2DA6900795A74 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD32AD2DA6900795A74 /* DetailsView.swift */; };
 		DAB25FD62AD2DA8F00795A74 /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD52AD2DA8F00795A74 /* UsageView.swift */; };
+		DAB25FDA2AD3022500795A74 /* CTFont+traits.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD92AD3022500795A74 /* CTFont+traits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		DAB25FD12AD2DA4400795A74 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
 		DAB25FD32AD2DA6900795A74 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		DAB25FD52AD2DA8F00795A74 /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
+		DAB25FD92AD3022500795A74 /* CTFont+traits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFont+traits.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				DAB25FBF2AD26E6100795A74 /* CTFontDescriptor+attribute.swift */,
 				DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */,
 				DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */,
+				DAB25FD92AD3022500795A74 /* CTFont+traits.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				DAB25FCE2AD2D9C900795A74 /* DescriptionView.swift in Sources */,
 				DAB25FD42AD2DA6900795A74 /* DetailsView.swift in Sources */,
 				DAB25FC02AD26E6100795A74 /* CTFontDescriptor+attribute.swift in Sources */,
+				DAB25FDA2AD3022500795A74 /* CTFont+traits.swift in Sources */,
 				DAB25FCB2AD29F6C00795A74 /* NameHeaderView.swift in Sources */,
 				DAB25FBD2AD269AF00795A74 /* FontModel.swift in Sources */,
 				DAB25FC42AD2722600795A74 /* Home.swift in Sources */,

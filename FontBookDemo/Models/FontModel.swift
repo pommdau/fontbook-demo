@@ -48,6 +48,7 @@ extension FontModel {
     static let sampleData: [FontModel] = [
 //        .init(url: URL(filePath: "/System/Library/Fonts/Helvetica.ttc"))!
         .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
+//        .init(url: URL(filePath: "/System/Library/Fonts/Supplemental/AmericanTypewriter.ttc"))!
     ]
 }
 
