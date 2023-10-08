@@ -1,5 +1,13 @@
 #  README
+# Preview
+- 実装が完成していないため色々問題があると思います。コードはあくまで参考まで。
+- 取得方法がわからない項目に関しては❓としています。
 
+<img width="868" alt="image" src="https://github.com/pommdau/fontbook-demo/assets/29433103/c04b74eb-1f79-40d3-9966-f9eb14f81960">
+
+<img width="868" alt="image" src="https://github.com/pommdau/fontbook-demo/assets/29433103/1574dc0b-9916-4584-919b-8939778d5c45">
+
+# References
 - [CGFont](https://developer.apple.com/documentation/coregraphics/cgfont)
 - [CTFont](https://developer.apple.com/documentation/coretext/ctfont-q6r)
     - [Font Attributes](https://developer.apple.com/documentation/coretext/ctfontdescriptor/font_attributes)
