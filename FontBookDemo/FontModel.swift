@@ -31,6 +31,13 @@ class FontModel {
         self.nsFont = ctFont as NSFont
         self.ctFontDescriptor = CTFontCopyFontDescriptor(ctFont)
     }
+    
+    var isSystemFont: Bool {
+        guard let systemLibraryPath = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .systemDomainMask, false).first else {
+            return false
+        }
+        return url.path.contains(systemLibraryPath)
+    }
 }
 
 extension FontModel: Identifiable {

@@ -215,13 +215,13 @@ struct DetailsView: View {
             VStack(alignment: .leading) {
                 Text("System Font")
                     .fontWeight(.semibold)
-                Text("❓")
+                Text(fontModel.isSystemFont ? "Yes" : "No")
             }
             
             VStack(alignment: .leading) {
                 Text("Active")
                     .fontWeight(.semibold)
-                Text(fontModel.ctFontDescriptor.registrationScopeString ?? "")
+                Text("❓")
             }
             
             VStack(alignment: .leading) {

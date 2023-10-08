@@ -33,18 +33,18 @@ extension CTFontDescriptor {
         }
     }
     
-    var registrationScopeString: String? {
-        guard let registrationScope else {
-            return nil
-        }
-        switch registrationScope {
-        case .none:
-            return "NO"
-        case .process, .persistent, .session, .user:
-            return "YES"
-        @unknown default:
-            fatalError()
-        }
-    }
+//    var registrationScopeString: String? {
+//        guard let registrationScope else {
+//            return nil
+//        }
+//        switch registrationScope {
+//        case .none:
+//            return "NO"
+//        case .process, .persistent, .session, .user:
+//            return "YES"
+//        @unknown default:
+//            fatalError()
+//        }
+//    }
     
 }
