@@ -30,7 +30,7 @@
 >[フォントの生成とカスタマイズ](https://thinkit.co.jp/story/2014/09/02/5199)
 >なお、UIFontとUIFontDescriptorはtoll-free型オブジェクトです。それぞれ、CTFont、CTFontDescriptorとの間でオブジェクトをキャストしてそのまま利用できます*1。
 
-- `Copy Protected`に関してはOS/2テーブルのfsTypeだろう。ただし取得する方法が分からず。
+- `Embedded`に関してはOS/2テーブルのfsTypeだろう。ただし取得する方法が分からず。
     - [The 'OS/2' table](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6OS2.html)
     - https://learn.microsoft.com/ja-jp/typography/opentype/spec/os2#fstype
     - [埋め込めないフォントを埋め込むとどうなるか](https://zrbabbler.hatenablog.com/entry/20161016/1476593727)
