@@ -16,6 +16,12 @@
 		DAB25FC22AD26EE100795A74 /* CTFont+NameSpecifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */; };
 		DAB25FC42AD2722600795A74 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC32AD2722600795A74 /* Home.swift */; };
 		DAB25FC62AD2873000795A74 /* CTFontDescriptor+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */; };
+		DAB25FCB2AD29F6C00795A74 /* NameHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FCA2AD29F6C00795A74 /* NameHeaderView.swift */; };
+		DAB25FCE2AD2D9C900795A74 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FCD2AD2D9C900795A74 /* DescriptionView.swift */; };
+		DAB25FD02AD2DA1400795A74 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FCF2AD2DA1400795A74 /* LanguagesView.swift */; };
+		DAB25FD22AD2DA4400795A74 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD12AD2DA4400795A74 /* IdentifierView.swift */; };
+		DAB25FD42AD2DA6900795A74 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD32AD2DA6900795A74 /* DetailsView.swift */; };
+		DAB25FD62AD2DA8F00795A74 /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FD52AD2DA8F00795A74 /* UsageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		DAB25FC32AD2722600795A74 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFontDescriptor+properties.swift"; sourceTree = "<group>"; };
 		DAB25FC72AD28D0600795A74 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DAB25FCA2AD29F6C00795A74 /* NameHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderView.swift; sourceTree = "<group>"; };
+		DAB25FCD2AD2D9C900795A74 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		DAB25FCF2AD2DA1400795A74 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
+		DAB25FD12AD2DA4400795A74 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
+		DAB25FD32AD2DA6900795A74 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		DAB25FD52AD2DA8F00795A74 /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +78,8 @@
 			children = (
 				DAB25FAD2AD00A9A00795A74 /* FontBookDemoApp.swift */,
 				DAB25FAF2AD00A9A00795A74 /* ContentView.swift */,
-				DAB25FC32AD2722600795A74 /* Home.swift */,
-				DAB25FBC2AD269AF00795A74 /* FontModel.swift */,
+				DAB25FC92AD29F5E00795A74 /* Models */,
+				DAB25FC82AD29F5C00795A74 /* Views */,
 				DAB25FBE2AD26E5B00795A74 /* Extensions */,
 				DAB25FB12AD00A9B00795A74 /* Assets.xcassets */,
 				DAB25FB62AD00A9B00795A74 /* FontBookDemo.entitlements */,
@@ -92,6 +104,28 @@
 				DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAB25FC82AD29F5C00795A74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAB25FC32AD2722600795A74 /* Home.swift */,
+				DAB25FCA2AD29F6C00795A74 /* NameHeaderView.swift */,
+				DAB25FCD2AD2D9C900795A74 /* DescriptionView.swift */,
+				DAB25FCF2AD2DA1400795A74 /* LanguagesView.swift */,
+				DAB25FD12AD2DA4400795A74 /* IdentifierView.swift */,
+				DAB25FD32AD2DA6900795A74 /* DetailsView.swift */,
+				DAB25FD52AD2DA8F00795A74 /* UsageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAB25FC92AD29F5E00795A74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAB25FBC2AD269AF00795A74 /* FontModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,12 +198,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB25FD22AD2DA4400795A74 /* IdentifierView.swift in Sources */,
 				DAB25FB02AD00A9A00795A74 /* ContentView.swift in Sources */,
 				DAB25FAE2AD00A9A00795A74 /* FontBookDemoApp.swift in Sources */,
+				DAB25FD62AD2DA8F00795A74 /* UsageView.swift in Sources */,
 				DAB25FC62AD2873000795A74 /* CTFontDescriptor+properties.swift in Sources */,
+				DAB25FCE2AD2D9C900795A74 /* DescriptionView.swift in Sources */,
+				DAB25FD42AD2DA6900795A74 /* DetailsView.swift in Sources */,
 				DAB25FC02AD26E6100795A74 /* CTFontDescriptor+attribute.swift in Sources */,
+				DAB25FCB2AD29F6C00795A74 /* NameHeaderView.swift in Sources */,
 				DAB25FBD2AD269AF00795A74 /* FontModel.swift in Sources */,
 				DAB25FC42AD2722600795A74 /* Home.swift in Sources */,
+				DAB25FD02AD2DA1400795A74 /* LanguagesView.swift in Sources */,
 				DAB25FC22AD26EE100795A74 /* CTFont+NameSpecifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

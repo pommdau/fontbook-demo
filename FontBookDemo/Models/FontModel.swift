@@ -44,6 +44,13 @@ class FontModel {
     }
 }
 
+extension FontModel {
+    static let sampleData: [FontModel] = [
+//        .init(url: URL(filePath: "/System/Library/Fonts/Helvetica.ttc"))!
+        .init(url: URL(filePath: "/Users/ikeh/Library/Fonts/NotoSansCJKjp-Regular_2.otf"))!
+    ]
+}
+
 extension FontModel: Identifiable {
     var id: String {
         uuid.uuidString
