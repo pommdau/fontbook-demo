@@ -16,12 +16,16 @@ struct Home: View {
     var body: some View {
         VStack(alignment: .leading) {
             if let fontModel = fontModels.first {
-                NameHeaderView(fontModel: fontModel)
-                DescriptionView(fontModel: fontModel)
+//                NameHeaderView(fontModel: fontModel)
+//                DescriptionView(fontModel: fontModel)
+//                Divider()
+//                LanguagesView(fontModel: fontModel)
+//                Divider()
+//                IdentifierView(fontModel: fontModel)
+//                UsageView(fontModel: fontModel)
+//                Divider()
+                DetailsView(fontModel: fontModel)
                 Divider()
-                LanguagesView(fontModel: fontModel)
-                Divider()
-                IdentifierView(fontModel: fontModel)
             } else {
                 Image(systemName: "globe")
                     .imageScale(.large)
@@ -39,10 +43,10 @@ struct NameHeaderView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(fontModel.ctFontDescriptor.familyName ?? "")
+            Text(fontModel.ctFont.family ?? "")
                 .font(.title2)
                 .bold()
-            Text(fontModel.ctFontDescriptor.styleName ?? "")
+            Text(fontModel.ctFont.style ?? "")
                 .font(.title3)
         }
     }
@@ -119,29 +123,130 @@ struct IdentifierView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("識別子")
-                .padding(.bottom, 10)
+            Text("Identifiers")
+                .font(.title3)
+                .bold()
+                .foregroundStyle(.secondary)
+                .padding(.top, 10)
             
             VStack(alignment: .leading) {
-                Text("ファミリー名")
+                Text("Family Name")
                     .bold()
-                Text("\(fontModel.ctFontDescriptor.familyName ?? "(nil)")")
+                Text("\(fontModel.ctFont.family ?? "")")
             }
             VStack(alignment: .leading) {
-                Text("スタイル名")
+                Text("Style Name")
                     .bold()
-                Text("\(fontModel.ctFontDescriptor.styleName ?? "(nil)")")
+                Text("\(fontModel.ctFont.style ?? "(nil)")")
             }
             VStack(alignment: .leading) {
-                Text("PostScript名")
+                Text("PostScript Name")
                     .bold()
-                Text("\(fontModel.ctFontDescriptor.postScriptName ?? "(nil)")")
+                Text("\(fontModel.ctFont.postScriptName ?? "(nil)")")
             }
             VStack(alignment: .leading) {
-                Text("一意名")
+                Text("Unique Name")
                     .bold()
-                Text("(nil)")
+                Text("\(fontModel.ctFont.unique ?? "(nil)")")
             }
+        }
+    }
+}
+
+struct UsageView: View {
+    
+    let fontModel: FontModel
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Usage")
+                .font(.title3)
+                .bold()
+                .foregroundStyle(.secondary)
+                .padding(.top, 10)
+            
+            VStack(alignment: .leading) {
+                Text("Copyright")
+                    .bold()
+                Text("\(fontModel.ctFont.copyright ?? "")")
+            }
+            VStack(alignment: .leading) {
+                Text("Trademark")
+                    .bold()
+                Text("\(fontModel.ctFont.trademark ?? "(nil)")")
+            }
+            VStack(alignment: .leading) {
+                Text("License")
+                    .bold()
+                Text("\(fontModel.ctFont.license ?? "(nil)")")
+            }
+            VStack(alignment: .leading) {
+                Text("Embedding")
+                    .bold()
+                Text("❓")
+            }
+            VStack(alignment: .leading) {
+                Text("Copy Protected")
+                    .bold()
+                Text("❓")
+            }
+        }
+    }
+}
+
+struct DetailsView: View {
+    
+    let fontModel: FontModel
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Details")
+                .font(.title3)
+                .bold()
+                .foregroundStyle(.secondary)
+                .padding(.top, 10)
+            
+            VStack(alignment: .leading) {
+                Text("Format")
+                    .bold()
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("System Font")
+                    .bold()
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Active")
+                    .bold()
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Duplicate")
+                    .bold()
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Glyph Count")
+                    .bold()
+                Text("❓")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Location")
+                    .bold()
+                Text(fontModel.ctFontDescriptor.url?.path ?? "")
+            }
+            
+            VStack(alignment: .leading) {
+                Text("Version")
+                    .bold()
+                Text(fontModel.ctFont.version ?? "")
+            }            
         }
     }
 }
