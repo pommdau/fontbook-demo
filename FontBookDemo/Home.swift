@@ -16,16 +16,23 @@ struct Home: View {
     var body: some View {
         VStack(alignment: .leading) {
             if let fontModel = fontModels.first {
-//                NameHeaderView(fontModel: fontModel)
-//                DescriptionView(fontModel: fontModel)
-//                Divider()
-//                LanguagesView(fontModel: fontModel)
-//                Divider()
-//                IdentifierView(fontModel: fontModel)
-//                UsageView(fontModel: fontModel)
-//                Divider()
-                DetailsView(fontModel: fontModel)
-                Divider()
+                NameHeaderView(fontModel: fontModel)
+                    .padding(.top)
+                    .padding(.leading)
+                ScrollView() {
+                    VStack(alignment: .leading) {
+                        DescriptionView(fontModel: fontModel)
+                        Divider()
+                        LanguagesView(fontModel: fontModel)
+                        Divider()
+                        IdentifierView(fontModel: fontModel)
+                        UsageView(fontModel: fontModel)
+                        Divider()
+                        DetailsView(fontModel: fontModel)
+                        Divider()
+                    }
+                    .padding()
+                }
             } else {
                 Image(systemName: "globe")
                     .imageScale(.large)
@@ -33,7 +40,8 @@ struct Home: View {
                 Text("Hello, world!")
             }
         }
-        .padding()
+//        .padding()
+        .background(Color(nsColor: .textBackgroundColor))
     }
 }
 
@@ -69,7 +77,8 @@ struct DescriptionView: View {
             
             VStack(alignment: .leading) {
                 Text("Designer")
-                    .bold()
+//                    .bold()
+                    .fontWeight(.medium)
                 Text(fontModel.ctFont.designer ?? "")
             }
             
@@ -246,7 +255,7 @@ struct DetailsView: View {
                 Text("Version")
                     .bold()
                 Text(fontModel.ctFont.version ?? "")
-            }            
+            }
         }
     }
 }
@@ -275,8 +284,7 @@ extension Home {
         return [systemLibraryPath, generalLibraryPath, userLibraryPath]
             .map { URL(filePath: $0) }
             .map { $0.appendingPathComponent("Fonts") }
-    }
-    
+    }    
 }
 
 
