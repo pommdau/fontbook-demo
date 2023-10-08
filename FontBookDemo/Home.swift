@@ -21,13 +21,13 @@ struct Home: View {
                     .padding(.leading)
                 ScrollView() {
                     VStack(alignment: .leading) {
-                        DescriptionView(fontModel: fontModel)
-                        Divider()
-                        LanguagesView(fontModel: fontModel)
-                        Divider()
-                        IdentifierView(fontModel: fontModel)
-                        UsageView(fontModel: fontModel)
-                        Divider()
+//                        DescriptionView(fontModel: fontModel)
+//                        Divider()
+//                        LanguagesView(fontModel: fontModel)
+//                        Divider()
+//                        IdentifierView(fontModel: fontModel)
+//                        UsageView(fontModel: fontModel)
+//                        Divider()
                         DetailsView(fontModel: fontModel)
                         Divider()
                     }
@@ -67,9 +67,7 @@ struct DescriptionView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Description")
-                .font(.title3)
-                .bold()
-                .foregroundStyle(.secondary)
+                .sectionTitle()
                 .padding(.top, 10)
             
             Text(fontModel.ctFont.description ?? "")
@@ -77,14 +75,13 @@ struct DescriptionView: View {
             
             VStack(alignment: .leading) {
                 Text("Designer")
-//                    .bold()
-                    .fontWeight(.medium)
+                    .fontWeight(.semibold)
                 Text(fontModel.ctFont.designer ?? "")
             }
             
             VStack(alignment: .leading) {
                 Text("Manufacturer")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text(fontModel.ctFont.manufacturer ?? "")
             }
         }
@@ -113,13 +110,13 @@ struct LanguagesView: View {
             
             VStack(alignment: .leading) {
                 Text("言語:")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(languagesString)")
             }
             
             VStack(alignment: .leading) {
                 Text("スクリプト")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("(I don't know how to get it.)")
             }
         }
@@ -133,29 +130,27 @@ struct IdentifierView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Identifiers")
-                .font(.title3)
-                .bold()
-                .foregroundStyle(.secondary)
+                .sectionTitle()
                 .padding(.top, 10)
             
             VStack(alignment: .leading) {
                 Text("Family Name")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.family ?? "")")
             }
             VStack(alignment: .leading) {
                 Text("Style Name")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.style ?? "(nil)")")
             }
             VStack(alignment: .leading) {
                 Text("PostScript Name")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.postScriptName ?? "(nil)")")
             }
             VStack(alignment: .leading) {
                 Text("Unique Name")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.unique ?? "(nil)")")
             }
         }
@@ -169,34 +164,32 @@ struct UsageView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Usage")
-                .font(.title3)
-                .bold()
-                .foregroundStyle(.secondary)
+                .sectionTitle()
                 .padding(.top, 10)
             
             VStack(alignment: .leading) {
                 Text("Copyright")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.copyright ?? "")")
             }
             VStack(alignment: .leading) {
                 Text("Trademark")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.trademark ?? "(nil)")")
             }
             VStack(alignment: .leading) {
                 Text("License")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("\(fontModel.ctFont.license ?? "(nil)")")
             }
             VStack(alignment: .leading) {
                 Text("Embedding")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("❓")
             }
             VStack(alignment: .leading) {
                 Text("Copy Protected")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("❓")
             }
         }
@@ -210,50 +203,48 @@ struct DetailsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Details")
-                .font(.title3)
-                .bold()
-                .foregroundStyle(.secondary)
+                .sectionTitle()
                 .padding(.top, 10)
             
             VStack(alignment: .leading) {
                 Text("Format")
-                    .bold()
-                Text("❓")
+                    .fontWeight(.semibold)
+                Text(fontModel.ctFontDescriptor.formatString ?? "")
             }
             
             VStack(alignment: .leading) {
                 Text("System Font")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("❓")
             }
             
             VStack(alignment: .leading) {
                 Text("Active")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("❓")
             }
             
             VStack(alignment: .leading) {
                 Text("Duplicate")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text("❓")
             }
             
             VStack(alignment: .leading) {
                 Text("Glyph Count")
-                    .bold()
-                Text("❓")
+                    .fontWeight(.semibold)
+                Text("\(CTFontGetGlyphCount(fontModel.ctFont))")
             }
             
             VStack(alignment: .leading) {
                 Text("Location")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text(fontModel.ctFontDescriptor.url?.path ?? "")
             }
             
             VStack(alignment: .leading) {
                 Text("Version")
-                    .bold()
+                    .fontWeight(.semibold)
                 Text(fontModel.ctFont.version ?? "")
             }
         }
@@ -284,9 +275,18 @@ extension Home {
         return [systemLibraryPath, generalLibraryPath, userLibraryPath]
             .map { URL(filePath: $0) }
             .map { $0.appendingPathComponent("Fonts") }
-    }    
+    }
 }
 
+extension View {
+    func sectionTitle() -> some View {
+        self
+            .font(.title3)
+            .bold()
+            .foregroundStyle(.secondary)
+    }
+    
+}
 
 #Preview {
 //    ContentView()

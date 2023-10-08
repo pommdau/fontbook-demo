@@ -15,6 +15,7 @@
 		DAB25FC02AD26E6100795A74 /* CTFontDescriptor+attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FBF2AD26E6100795A74 /* CTFontDescriptor+attribute.swift */; };
 		DAB25FC22AD26EE100795A74 /* CTFont+NameSpecifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */; };
 		DAB25FC42AD2722600795A74 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC32AD2722600795A74 /* Home.swift */; };
+		DAB25FC62AD2873000795A74 /* CTFontDescriptor+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DAB25FBF2AD26E6100795A74 /* CTFontDescriptor+attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFontDescriptor+attribute.swift"; sourceTree = "<group>"; };
 		DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFont+NameSpecifier.swift"; sourceTree = "<group>"; };
 		DAB25FC32AD2722600795A74 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTFontDescriptor+properties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB25FBF2AD26E6100795A74 /* CTFontDescriptor+attribute.swift */,
+				DAB25FC52AD2873000795A74 /* CTFontDescriptor+properties.swift */,
 				DAB25FC12AD26EE100795A74 /* CTFont+NameSpecifier.swift */,
 			);
 			path = Extensions;
@@ -161,6 +164,7 @@
 			files = (
 				DAB25FB02AD00A9A00795A74 /* ContentView.swift in Sources */,
 				DAB25FAE2AD00A9A00795A74 /* FontBookDemoApp.swift in Sources */,
+				DAB25FC62AD2873000795A74 /* CTFontDescriptor+properties.swift in Sources */,
 				DAB25FC02AD26E6100795A74 /* CTFontDescriptor+attribute.swift in Sources */,
 				DAB25FBD2AD269AF00795A74 /* FontModel.swift in Sources */,
 				DAB25FC42AD2722600795A74 /* Home.swift in Sources */,
