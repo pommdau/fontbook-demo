@@ -18,6 +18,10 @@ class FontModel {
         nsFont.fontDescriptor
     }
     
+    var nsFontForPreview: NSFont {
+        NSFont.init(name: nsFont.fontName, size: 36) ?? .systemFont(ofSize: 12)
+    }
+        
     init?(url: URL) {
         guard
             let data = try? Data(contentsOf: url) as NSData,
