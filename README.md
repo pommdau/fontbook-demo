@@ -3,9 +3,9 @@
 - 実装が完成していないため色々問題があると思います。コードはあくまで参考まで。
 - 取得方法がわからない項目に関しては❓としています。
 
-<img width="868" alt="image" src="https://github.com/pommdau/fontbook-demo/assets/29433103/c04b74eb-1f79-40d3-9966-f9eb14f81960">
+<img width="600" alt="image" src="https://i.imgur.com/MqhqwHV.png">
 
-<img width="868" alt="image" src="https://github.com/pommdau/fontbook-demo/assets/29433103/1574dc0b-9916-4584-919b-8939778d5c45">
+<img width="600" alt="image" src="https://i.imgur.com/h3NZSQ8.png">
 
 # References
 - [CGFont](https://developer.apple.com/documentation/coregraphics/cgfont)

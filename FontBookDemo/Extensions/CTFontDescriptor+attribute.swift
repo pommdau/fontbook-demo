@@ -90,8 +90,16 @@ extension CTFontDescriptor {
     }
     
     // A list of covered languages for a font reference.
-    var languages: Array<String>? {
-        loadAttribute(withKey: kCTFontLanguagesAttribute)
+    var languages: [String] {
+        let languageCodes: Array<String>? = loadAttribute(withKey: kCTFontLanguagesAttribute)
+        if let languageCodes {
+            // https://stackoverflow.com/questions/72665593/how-to-get-the-language-code-back-from-a-localizedstring
+            return languageCodes
+                .compactMap { (Locale.current as NSLocale).localizedString(forLanguageCode: $0) }
+                .sorted(by: { $0 < $1 })
+        }
+                
+        return []
     }
     
     // The baseline adjustment for a font reference.

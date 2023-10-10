@@ -12,13 +12,7 @@ struct LanguagesView: View {
     let fontModel: FontModel
     
     var languagesString: String {
-        guard let languages = fontModel.ctFontDescriptor.languages else {
-            return ""
-        }
-        return languages
-            .sorted(by: { first, second in
-                first < second
-            })
+        fontModel.ctFontDescriptor.languages
             .joined(separator: "・")
     }
     
