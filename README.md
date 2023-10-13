@@ -14,6 +14,8 @@
     - [Name Specifier Constants](https://developer.apple.com/documentation/coretext/ctfont/name_specifier_constants)
     - [Font Feature Constants](https://developer.apple.com/documentation/coretext/ctfont/font_feature_constants)    
     - [Font Variation Axis Dictionary Keys](https://developer.apple.com/documentation/coretext/ctfont/font_variation_axis_dictionary_keys)
+    - [Core Text Functions](https://developer.apple.com/documentation/coretext/core_text_functions)
+        - 登録済みフォントとか取得できそう
 - [NSFont](https://developer.apple.com/documentation/appkit/nsfont)
     - [NSFontDescriptor](https://developer.apple.com/documentation/appkit/nsfontdescriptor)
     - [NSFontDescriptor\.AttributeName](https://developer.apple.com/documentation/appkit/nsfontdescriptor/attributename)
